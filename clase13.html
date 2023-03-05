@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Clase 21</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital--green: #acd9b2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg:18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .product-detail{
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: 500;
+            height: 50px;
+        }
+        .add-to-cart-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-detail{
+            width: 360px;
+            padding: 24px;
+            position: absolute;
+            right: 0;
+            box-sizing: border-box;
+        }
+        .title-container{
+            display: flex;
+        }
+        .title-container img{
+            transform: rotate(180deg);
+            margin-right: 10px;
+        }
+        .title {
+            font-weight: 700;
+            font-size: var(--lg);
+        }
+        .order{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 12px;
+            padding: 0 24px;
+        }
+        .order p:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+        .order p:nth-child(2){
+            text-align: end;
+            font-weight: 700;
+        }
+        .order p span:nth-child(1){
+            font-size: var(--md);
+            font-weight: 700;
+        }
+        .shopping-card{
+            display: grid;
+            grid-template-columns: auto 1fr auto auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            place-items: center;
+        }
+        .shopping-card figure{
+            margin: 0;
+        }
+        .shopping-card figure img{
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-card figure:nth-child(4) img {
+            width: 12px;
+            height: 12px;
+        }
+        .shopping-card p:nth-child(2){
+            color: var(--very-light-pink);
+        }
+        .shopping-card p:nth-child(3){
+            font-size: var(--md);
+            font-weight: 700;
+        }
+        @media (max-width:640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="title-container">
+            <img src="./icons/flechita.svg" alt="Arrow">
+            <p class="title">My order</p>
+        </div>
+        <div class="my-order-content">
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://scontent.fbog9-1.fna.fbcdn.net/v/t39.30808-6/332470236_1593124754519956_6388929877750395468_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeELUVD1ouo7xslv1GkC7idHyVkWXvxvkMrJWRZe_G-QyhcKJOOOATzBxO6_i3v-76va6Ql1LICRzbIz036lOt_f&_nc_ohc=EHraIs6iLZ0AX8fBWOr&_nc_ht=scontent.fbog9-1.fna&oh=00_AfAzzQSzgZ44zf0Ad6bdUR7wXMHr4GTtZRiRcnWKNo9Iuw&oe=6405E0A7" alt="Camiseta Blanca Death Note">
+                </figure>
+                <p>Camiseta Death Note</p>
+                <p>$16.000</p>
+                <figure>
+                    <img src="./icons/icon_close.png" alt="close icon">
+                </figure>
+            </div>
+
+            <div class="shopping-card">
+                <figure>
+                    <img src="https://scontent.fbog9-1.fna.fbcdn.net/v/t39.30808-6/325413751_1326579294843035_4114001244420873884_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEqJd51kknCjVMpzGVZktKp_6pdBnwSzA__ql0GfBLMD5vaUwzm34zIYrkO2xjv0x1znQrcFeJP25H6TQ3TrqR-&_nc_ohc=K6qacLIvUFAAX9IqnSG&_nc_ht=scontent.fbog9-1.fna&oh=00_AfA33kZ8SHX7FYjBxLUe5QhLMwCh1lbveM5bx9BdQX8DUw&oe=64067261" alt="Camiseta Blanca Death Note">
+                </figure>
+                <p>Pocillo Death Note</p>
+                <p>$13.000</p>
+                <figure>
+                    <img src="./icons/icon_close.png" alt="close icon">
+                </figure>
+            </div>
+
+            <div class="order">
+                <p>
+                    <span>Total</span>
+                </p>
+                <p>
+                    $96.000
+                </p>
+            </div>
+
+            <button class="primary-button add-to-cart-button">
+                <img src="./icons/bt_add_to_cart.svg" alt="add to cart icon">
+                Checkout
+            </button>
+        </div>
+    </aside>
+</body>
+</html>

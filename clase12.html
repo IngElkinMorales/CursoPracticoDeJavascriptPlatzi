@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital--green: #acd9b2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg:18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .product-detail{
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-detail .product-detail-close img{
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 2px;
+        }
+        .product-detail img:nth-child(2){
+            width: 360px;
+            border-radius: 0 0 20px 20px;
+        }
+        .product-detail-close img:nth-child(1){
+            width: 10px;
+            max-width: 100vw;
+        }
+        .product-detail .product-detail-close img:nth-child(1):hover{
+            cursor: pointer;
+        }
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: 500;
+            height: 50px;
+        }
+        .add-to-cart-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-info{
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:nth-child(1){
+            font-weight: 700;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2){
+            font-weight: 700;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--very-light-pink);
+        }
+        .product-info p:nth-child(3){
+            font-weight: 700;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--very-light-pink);
+        }
+        @media (max-width:640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="close icon">
+        </div>
+        <img src="https://scontent.fbog9-1.fna.fbcdn.net/v/t39.30808-6/332470236_1593124754519956_6388929877750395468_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeELUVD1ouo7xslv1GkC7idHyVkWXvxvkMrJWRZe_G-QyhcKJOOOATzBxO6_i3v-76va6Ql1LICRzbIz036lOt_f&_nc_ohc=g8yuLejARwMAX_22_xm&_nc_ht=scontent.fbog9-1.fna&oh=00_AfDcbofSiqKpML-slqKQFSa4u70x2moZ4tOjt7PI_thnWg&oe=6407DAE7" alt="Death Note tshirt">
+        <div class="product-info">
+            <p>$16.000</p>
+            <p>Death note tshirt</p>
+            <p>
+                Looking for a unique and edgy addition to your wardrobe? Look no further than our Death Note T-Shirt! This stylish and distinctive tee features the iconic Death Note logo, inspired by the popular anime and manga series. <br> <br>
+
+                Made from high-quality materials, our Death Note T-Shirt is both comfortable and durable, making it the perfect choice for everyday wear. Its classic black color and bold design make it a standout piece that's sure to turn heads. <br> <br>
+                
+                Whether you're a die-hard Death Note fan or just looking to add a touch of anime-inspired style to your wardrobe, our Death Note T-Shirt is the perfect choice. So why wait? Grab yours today and start turning heads with your unique and edgy style!</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="./icons/bt_add_to_cart.svg" alt="add to cart icon">
+                Add to cart
+            </button>
+        </div>
+    </aside>
+</body>
+</html>
