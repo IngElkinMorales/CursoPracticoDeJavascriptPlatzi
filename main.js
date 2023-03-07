@@ -1,3 +1,4 @@
+/* Selectores */
 const menuEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
@@ -5,12 +6,16 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.product-detail');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetail2Container = document.querySelector('.product-detail-2')
+const productDetail2CloseIcon = document.querySelector('.product-detail-2-close-icon')
 
 const productList = [] 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarritoAside);
+productDetail2CloseIcon.addEventListener('click', closeProductDetail2);
+
 
 function toggleDesktopMenu(){
     const isAsideClosed = aside.classList.contains('inactive');
@@ -27,21 +32,33 @@ function toggleMobileMenu(){
         aside.classList.add('inactive')
     }
     
+    closeProductDetail2()
     mobileMenu.classList.toggle('inactive');
 }
 function toggleCarritoAside(){
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-    const isDesktopMenuuClosed = desktopMenu.classList.contains('inactive');
-
+    const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+    
     if(!isMobileMenuClosed){
         mobileMenu.classList.add('inactive')
     }
 
-    if(!isDesktopMenuuClosed){
+    if(!isDesktopMenuClosed){
         desktopMenu.classList.add('inactive')
     }
 
     aside.classList.toggle('inactive');
+    
+    productDetail2Container.classList.add('inactive');
+}
+function closeProductDetail2(){
+
+    productDetail2Container.classList.add('inactive')
+}
+function openProductDetail2(){
+    aside.classList.add('inactive')
+
+    productDetail2Container.classList.remove('inactive')
 }
 
 productList.push({
@@ -87,6 +104,7 @@ productList.push({
 Este ciclo for crea esta estructura HTML y la inserta dinámicamente dependiendo de la cantidad de productos que tenga el array productList
 */
 
+
 function renderProducts(arr){
     for (product of arr){
         const productCard = document.createElement('div');
@@ -95,6 +113,7 @@ function renderProducts(arr){
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
         productImg.setAttribute('alt', product.name);
+        productImg.addEventListener('click', openProductDetail2);
         
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
